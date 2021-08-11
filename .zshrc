@@ -3,13 +3,16 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-theme-agnoster/agnoster.zsh-theme
 
+# history
+SAVEHIST=1000  # Save most-recent 1000 lines
+HISTFILE=~/.zsh_history
+
 # preferred editor
 if type "code" > /dev/null; then
     export EDITOR="code"
 else
     export EDITOR="nano"
 fi
-
 
 # Running under WSL (Windows Subsystem for Linux)?
 if [ $(uname -r | sed -n 's/.*\( *Microsoft *\).*/\1/ip') ]; then

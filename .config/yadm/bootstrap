@@ -1,0 +1,19 @@
+#!/bin/sh
+
+sudo apt-get update
+sudo apt-get install -y git zsh yadm
+
+# ZSH Plugins
+if [ ! -d "$HOME/.zsh/zsh-autosuggestions" ]; then
+    git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.zsh/zsh-autosuggestions
+fi
+if [ ! -d "$HOME/.zsh/zsh-syntax-highlighting" ]; then
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
+fi
+
+# change default shell
+sudo chsh -s $(which zsh)
+zsh
+
+# nvm
+# wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash

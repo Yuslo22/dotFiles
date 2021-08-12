@@ -35,6 +35,10 @@ if type "docker-compose" > /dev/null; then
     alias dcr="docker-compose restart"
 fi
 
+# keybinds
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
 # zsh utils
 alias zshrc="$EDITOR ~/.zshrc"
 alias reload="source ~/.zshrc"

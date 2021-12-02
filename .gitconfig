@@ -1,3 +1,5 @@
 [user]
 	email = git@davidplugge.de
 	name = David Plugge
+[init]
+	defaultBranch = main

@@ -5,6 +5,8 @@ alias reload="source ~/.zshrc"
 alias update="sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt-get autoremove -y && sudo apt-get autoclean -y"
 # get external ip
 alias ipe="curl ipconfig.io/ip"
+alias ipe4="curl -4 ipconfig.io/ip"
+alias ipe6="curl -6 ipconfig.io/ip"
 # shurthands
 alias c="clear"
 alias ls="ls -F --color=auto"

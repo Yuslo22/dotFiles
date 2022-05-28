@@ -24,5 +24,3 @@ if [ ! -z "$theme" ]; then
         source ~/.zsh/themes/$theme.zsh-theme
     fi;
 fi
-
-# test

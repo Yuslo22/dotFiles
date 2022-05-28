@@ -25,3 +25,4 @@ if [ ! -z "$theme" ]; then
     fi;
 fi
 
+# test

@@ -1,4 +1,5 @@
 if type "git" > /dev/null; then
+
     function git_current_branch() {
         local ref
         ref=$(git symbolic-ref --quiet HEAD 2> /dev/null)
@@ -88,4 +89,10 @@ if type "git" > /dev/null; then
     alias gsw="git switch"
     alias gswc="git switch -c"
     alias gswm="git switch $(git_main_branch)"
+
+    # git tag
+    alias gt="git tag"
+    alias gts="git tag -l"
+    alias gtc="git tag -a"
+    
 fi

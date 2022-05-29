@@ -1,22 +1,3 @@
-# open .zshrc in editor
-alias zshrc="$EDITOR ~/.zshrc"
-alias reload="source ~/.zshrc"
-# update system
-alias update="sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt-get autoremove -y && sudo apt-get autoclean -y"
-# get external ip
-alias ipe="curl ipconfig.io/ip"
-alias ipe4="curl -4 ipconfig.io/ip"
-alias ipe6="curl -6 ipconfig.io/ip"
-# shurthands
-alias c="clear"
-alias ls="ls -F --color=auto"
-alias ll="ls -lh"
-alias la="ls -a"
-alias lh="ls -lisAd .[^.]*"
-# automatically create parent dirs
-alias mkdir="mkdir -p"
-alias rmf="rm -rf"
-
 # kill process on the given port
 function killport() {
   if [[ $(sudo lsof -i:$1) ]]; then
@@ -26,3 +7,55 @@ function killport() {
     echo "port not in use"
   fi
 }
+
+# open .zshrc in editor
+alias zshrc="$EDITOR ~/.zshrc"
+alias reload="source ~/.zshrc"
+
+# shortcuts
+alias c="clear"
+
+# package manager
+alias updatefull="sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt-get autoremove -y && sudo apt-get autoclean -y"
+alias update="sudo apt-get update"
+alias upgrade="sudo apt-get upgrade"
+alias apti="sudo apt-get install"
+alias aptr="sudo apt-get remove"
+
+# ls
+alias ls="ls -F --color=auto"
+alias ll="ls -lh"
+alias la="ls -a"
+alias lh="ls -lisAd .[^.]*"
+alias l.='ls -d .*'
+
+# cd
+alias ..="cd .."
+alias .2="cd ../.."
+alias .3="cd ../../.."
+
+# mkdir
+alias mkdir="mkdir -p"
+
+# df
+alias df="dh -h"
+alias du="du -ch"
+
+# get external ip
+alias ipe="curl ipconfig.io/ip"
+alias ipe4="curl -4 ipconfig.io/ip"
+alias ipe6="curl -6 ipconfig.io/ip"
+
+# automatically create parent dirs
+alias mkdir="mkdir -p"
+alias rmf="rm -rf"
+
+
+# confirmations / checks
+alias mv="mv -i"
+alias cp="cp -i"
+alias ln="ln -i"
+alias rm="rm -I --preserve-root"
+alias chown='chown --preserve-root'
+alias chmod='chmod --preserve-root'
+alias chgrp='chgrp --preserve-root'

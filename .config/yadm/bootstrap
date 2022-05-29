@@ -7,3 +7,14 @@ fi
 if [ ! -d "$HOME/.zsh/zsh-syntax-highlighting" ]; then
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
 fi
+
+# install or update nvm
+if [ ! -d "$HOME/.nvm" ]; then
+    export NVM_DIR="$HOME/.nvm"
+    git clone https://github.com/nvm-sh/nvm.git "$NVM_DIR"
+    cd "$NVM_DIR"
+else
+    cd "$NVM_DIR"
+    git fetch --tags origin
+fi
+git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`

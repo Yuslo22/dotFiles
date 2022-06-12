@@ -50,7 +50,6 @@ alias ipe6="curl -6 ipconfig.io/ip"
 alias mkdir="mkdir -p"
 alias rmf="rm -rf"
 
-
 # confirmations / checks
 alias mv="mv -i"
 alias cp="cp -i"
@@ -59,3 +58,6 @@ alias rm="rm -I --preserve-root"
 alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
+
+# clear dns cache
+alias flushdns="sudo systemctl restart systemd-resolved"

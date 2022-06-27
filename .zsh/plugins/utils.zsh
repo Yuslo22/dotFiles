@@ -61,3 +61,6 @@ alias chgrp='chgrp --preserve-root'
 
 # clear dns cache
 alias flushdns="sudo systemctl restart systemd-resolved"
+
+# list open ports
+alias openports="sudo lsof -i -P -n | grep LISTEN"

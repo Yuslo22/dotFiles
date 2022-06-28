@@ -42,9 +42,9 @@ alias df="dh -h"
 alias du="du -ch"
 
 # get external ip
-alias ipe="curl ipconfig.io/ip"
-alias ipe4="curl -4 ipconfig.io/ip"
-alias ipe6="curl -6 ipconfig.io/ip"
+alias ipe="curl ipconfig.io"
+alias ipe4="curl -4 ipconfig.io"
+alias ipe6="curl -6 ipconfig.io"
 
 # automatically create parent dirs
 alias mkdir="mkdir -p"

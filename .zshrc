@@ -5,4 +5,3 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 plugins=*
 theme=agnoster
 source ~/.zsh/main.zsh
-

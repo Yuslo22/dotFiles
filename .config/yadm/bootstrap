@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # correctly set remote url to use ssh
-yadm remote set-url origin git@gitlab.com:david-plugge/dotfiles.git
+yadm remote set-url origin git@github.com:Yuslo22/dotFiles.git
 
 # ZSH Plugins
 if [ ! -d "$HOME/.zsh/zsh-autosuggestions" ]; then

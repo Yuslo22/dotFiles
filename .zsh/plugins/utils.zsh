@@ -112,5 +112,19 @@ function extract {
       fi
     done
   fi
+}
 
+function makesudo {
+  if [ -z "$1" ]; then
+    echo "Usage:  make-sudo USER"
+    exit
+  fi
+
+  if ! id -u "$1" >/dev/null 2>&1; then
+    echo "user '$1' does not exist"
+    exit
+  fi
+
+  echo "$1  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$1
+  sudo usermod -aG sudo $
 }
